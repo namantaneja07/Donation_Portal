@@ -1,0 +1,88 @@
+/* styles.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-columns: auto auto auto; /* Three columns */
+    background-color: #d2b48c; /* light chocolate background color */
+    color: white;
+    overflow: hidden; /* Hide overflow content */
+    font-size: 24px; /* Increased font size for h1 elements */
+}
+
+.leftImg, .midImg, .rightText {
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* Hide overflow content */
+    display: flex;
+    align-items: flex-end; /* Align images to the bottom */
+    justify-content: center;
+}
+
+.leftImg img {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+.midImg img {
+    max-height: 80%; /* Set max height of mid image to be smaller */
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+.rightText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align text to the right */
+    align-self: flex-end; /* Align to the bottom of the column */
+    text-align: right; /* Right align text */
+}
+
+.rightText h1 {
+    font-size: 60px;
+    margin-top: 0; /* Remove default margin */
+    margin-bottom: 5px; /* Adjust margin bottom */
+}
+
+.rightText p {
+    margin-top: 5px; /* Adjust spacing between paragraphs */
+    margin-bottom: 5px; /* Adjust margin bottom */
+}
+
+.rightText a {
+    display: flex;
+    justify-content: center; /* Center align buttons */
+    text-decoration: none; /* Remove underline */
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: 2px solid white; /* Add border */
+    color: white;
+    background-color: transparent; /* Transparent background */
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 50px; /* Set height */
+    width: 200px; /* Set width */
+}
+
+button:hover {
+    background-color: #d2b48c; /* Change background color on hover */
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        grid-template-columns: auto; /* Single column layout on smaller screens */
+    }
+}
